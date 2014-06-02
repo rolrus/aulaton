@@ -20,11 +20,10 @@ RSpec.configure do |conf|
   conf.include Rack::Test::Methods
   DataMapper::Logger.new($stdout, :all)
   DataMapper.auto_migrate!
-  user = User.create(:email => 'offerer@test.com',
-                   :name => 'Offerer', 
-                   :password => "Passw0rd!")
+  torneo = Torneo.create(:name => 'testName')
+                         
 end
 
 def app
-  JobVacancy::App.tap { |app|  }
+  Macaya::App.tap { |app|  }
 end

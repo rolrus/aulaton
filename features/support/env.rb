@@ -20,12 +20,10 @@ end
 
 DataMapper::Logger.new($stdout, :all)
 DataMapper.auto_migrate!
-user = User.create(:email => 'offerer@test.com',
-                   :name => 'Offerer', 
-                   :password => "Passw0rd!")
+torneo = Torneo.create(:name => 'testName')
 
 ##
 # You can handle all padrino applications using instead:
 #   Padrino.application
 #Capybara.default_driver = :selenium
-Capybara.app = JobVacancy::App.tap { |app|  }
+Capybara.app = Macaya::App.tap { |app|  }
