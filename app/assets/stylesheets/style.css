@@ -133,14 +133,12 @@ table,th,td
 	padding: 0;
 	list-style: none;
 	padding: 20px 0px 20px 0px;
-	background-image: url("izqdaul.gif");
 	background-repeat: repeat-x;
 }
 
 .columnaIzquierda li{
 	padding-left: 0; 
 	text-align: center;
-	background: transparent url("flechita2.gif") 0 2px no-repeat;
 	margin-bottom: 7px;	
 	color: #818181;
 }
