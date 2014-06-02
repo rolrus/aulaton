@@ -22,32 +22,8 @@
 	</section>
 
 	<div class="preamble" id="zen-preamble" role="article">
-			<h3>¿Qué es Macaya?</h3>
-			<p>Esta aplicación permite crear tus propios torneos, crear los equipos que participaran en esto y mucho más.</p>
-	</div>
+			<h3>Listado de Equipos</h3>
 
-	<div class="preamble" id="zen-preamble" role="article">
-			<h3>Torneos Creados Recientemente</h3>
-			<p>Aquí se encuentran los torneos recientemente creados: </p>
-			<table border="1" style="width:500px">
-				<tr>
-				  <th>Torneos</th>
-				</tr>
-				<% @torneos.each do | torneo | %>
-				<tr>
-  				<td>
-					<%= torneo.name %>
-				</td>
-				</tr>
- 				<% end %>
-
-			</table>
-			<p><a href="<%= url(:torneos, :all) %>" class="ver-mas">Ver más</a></p>
-	</div>
-
-	<div class="preamble" id="zen-preamble" role="article">
-			<h3>Equipos Creados Recientemente</h3>
-			<p>Aquí se encuentran los equipos recientemente creados: </p>
 			<table border="1" style="width:500px">
 				<tr>
 				  <th>Equipos</th> 
@@ -60,7 +36,6 @@
 				</tr>
  				<% end %>
 			</table>
-			<p><a href="<%= url(:equipos, :all) %>" class="ver-mas">Ver más</a></p>
 	</div>
 
 	<aside class="columnaIzquierda" role="complementary">
@@ -75,8 +50,8 @@
 						</li>	
 						<li>
 							
-						</li>	
--->							
+						</li>		
+-->						
 					</ul>
 				</nav>
 				
