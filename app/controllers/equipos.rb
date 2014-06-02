@@ -17,7 +17,7 @@ Macaya::App.controllers :equipos do
 		  redirect '/'
 		else
 		  flash.now[:error] = 'No se pudo crear el equipo.'
-		  render 'torneos/create'
+		  render 'equipos/new'
         	end
 	end
 end
