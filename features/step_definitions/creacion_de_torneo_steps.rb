@@ -9,11 +9,11 @@ When(/^creo un torneo llamado "(.*?)"$/) do |nombreTorneo|
   @torneo.save
 end
 
-Then(/^se crea exitosamente el "(.*?)"$/) do |nombreTorneo|
+Then(/^se crea exitosamente el torneo "(.*?)"$/) do |nombreTorneo|
   Torneo.get!(nombreTorneo)
 end
 
-Then(/^me indica error porque ya existe un "(.*?)"$/) do |arg1|
-  Torneo.count.should == 1
+Then(/^me indica error porque ya existe un torneo "(.*?)"$/) do |nombreTorneo|
+  Torneo.get!(nombreTorneo)
 end
 
