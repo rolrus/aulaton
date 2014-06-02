@@ -1,6 +1,13 @@
 language: ruby
 version: 1.9.3
 bundler_args: --without development staging production
-before_script: 
-  - "sh -e /etc/init.d/xvfb start"
+before_script:
+- sh -e /etc/init.d/xvfb start
 script: PADRINO_ENV=travis bundle exec padrino rake
+deploy:
+  provider: heroku
+  api_key:
+    secure: VoKHgJZb1yxJsDuCPu7nsKR3wg+TW/ZayauD/xgKvTMfqY395yWJT0XCR3+2Mh/A59avWTjNJ1GGHK27YkSb1L9MzZbwDmDeV32as1PSgyBcksB/firGPIsdMmF6yPlW/LVfMAD+0rNzcAL12UbfvShD6HWw4LtZxx5TtfPHv6g=
+  app: eis-macaya1
+  on:
+    repo: nahuelbe/eis-macaya1
