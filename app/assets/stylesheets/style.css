@@ -1,0 +1,161 @@
+/* Elementos xhtml */
+body{
+	padding: 0;
+	margin: 0;
+	font-family: "MS Trebuchet", Verdana, Geneva, Arial, Helvetica, sans-serif;	
+	font-size: 80%;
+	line-height: 135%;
+	color:  #424242;
+}
+
+a{
+	color: #D10505;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited{
+	color: #350000;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+h3{
+	color: #F0FFFF;
+	font-size: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: relative;
+	padding: 0 0 0 1px;
+	background-image: url("negro.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 0px;
+}
+
+p{
+	margin: 10px 0 5px 0;
+}
+
+/* ---- divs ---- */
+/* En orden de aparición en el codigo HTML */
+
+.page-wrapper{
+	position: relative;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	width: 740px;
+	border: 1px solid #5F5F5F;
+	border-bottom: 0;
+	border-top: 100;
+	margin: 0 auto;
+	text-align: left;
+}
+
+header {
+	padding: 0px 0 0 0px;
+}
+
+header h1{
+	width: 740px;
+	height: 200px;
+	background-image: url("basketPlayer2.jpg");
+	margin-bottom: 0;
+	margin-top: 0px;
+}
+
+header h2{
+	width: 500px;
+	height: 40px;
+	margin-top: -22px;
+	margin-bottom: 25px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+table,th,td
+{
+	border:1px solid black;
+	border-collapse:collapse;
+	padding: 5px;
+	margin-bottom: -8px;
+}
+
+.summary{
+	font-family: "MS Trebuchet", Verdana, Geneva, Arial, Helvetica, sans-serif;	
+	color: #fff;
+	margin-top: -40px;
+	margin-bottom: 25px;
+	line-height: 20px;
+	font-size: 100%;
+	text-align: center;
+}
+
+.summary p:last-child{
+	position: relative;
+	padding: 0px;
+	background-color: #AF0000;
+}
+
+.preamble{
+	margin-left: 220px;
+	padding-right: 10px;
+	font-size: 90%;
+}
+
+/* Columna izquierda */
+
+.columnaIzquierda {
+	position: absolute;
+	left: 22px;
+	top: 248px;
+	width: 178px;
+	font-size: 85%;
+	line-height: 140%;
+	background: #EFEFEF url("gris.jpg") top right repeat-y;
+}
+
+.columnaIzquierda h3{
+	text-align: center;
+	background: #af0000;
+	margin: 0;
+	padding: 5px 0 5px 0px;
+	color: #fff;
+	font-size: 100%;
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.columnaIzquierda ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding: 20px 0px 20px 0px;
+	background-image: url("izqdaul.gif");
+	background-repeat: repeat-x;
+}
+
+.columnaIzquierda li{
+	padding-left: 0; 
+	text-align: center;
+	background: transparent url("flechita2.gif") 0 2px no-repeat;
+	margin-bottom: 7px;	
+	color: #818181;
+}
+
+.columnaIzquierda li a{
+	display: inline;
+	text-align: center;
+	position: relative;
+	color: #af0000;
+}
+
+.columnaIzquierda li a.ver-mas{
+	color: #818181;
+}
+
+.columnaIzquierda table,th,td {
+	position: relative;
+}
