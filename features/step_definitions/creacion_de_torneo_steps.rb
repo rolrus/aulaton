@@ -1,19 +1,20 @@
 Given(/^no existen torneos$/) do
   Torneo.all.destroy
-  Torneo.count.should == 0
+  visit '/'
 end
 
-When(/^creo un torneo llamado "(.*?)"$/) do |nombreTorneo|
-  @torneo = Torneo.new
-  @torneo.name = nombreTorneo
-  @torneo.save
+When(/^creo un torneo llamado "(.*?)"$/) do |nombre_torneo|
+  visit '/torneos/new'
+  fill_in('torneo[name]', :with => nombre_torneo)
+  click_button('Crear')
+ end
+
+Then(/^se crea exitosamente el torneo "(.*?)"$/) do |nombre_torneo|
+  visit '/'
+  page.should have_content(nombre_torneo)
 end
 
-Then(/^se crea exitosamente el torneo "(.*?)"$/) do |nombreTorneo|
-  Torneo.get!(nombreTorneo)
-end
-
-Then(/^me indica error porque ya existe un torneo "(.*?)"$/) do |nombreTorneo|
-  Torneo.get!(nombreTorneo)
+Then(/^me indica error porque ya existe un torneo$/) do 
+  expect(page).to have_content 'Ya existe un mismo torneo'
 end
 

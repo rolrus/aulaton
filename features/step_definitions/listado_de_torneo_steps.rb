@@ -1,18 +1,23 @@
-Given(/^existe un "(.*?)"$/) do |nombreTorneo|
-  @torneo = Torneo.new
-  @torneo.name = nombreTorneo
-  @torneo.save
+Given(/^que tengo un torneo "(.*?)"$/) do |nombre_torneo|
+  Torneo.all.destroy
+  visit '/torneos/new'
+  fill_in('torneo[name]', :with => nombre_torneo)
+  click_button('Crear')
 end
 
-Then(/^la lista de torneos me muestra "(.*?)"$/) do |nombreTorneo|
-  @torneo = Torneo.new
-  @torneo.name = nombreTorneo
+And(/^otro torneo "(.*?)"$/) do |nombre_torneo|
+  visit '/torneos/new'
+  fill_in('torneo[name]', :with => nombre_torneo)
+  click_button('Crear')
+end
 
-  @torneos = Torneo.all  
-  @torneos.include?(@torneo).should == true
+Then(/^la lista de torneos me muestra "(.*?)"$/) do |nombre_torneo|
+  visit '/'
+  page.should have_content(nombre_torneo)
 end
 
 Then(/^la lista de torneos esta vacia$/) do
+#TODO check condition
   @torneos = Torneo.all
   @torneos.count.should == 0
 end
