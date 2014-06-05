@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Macaya</title>
+		<%= stylesheet_link_tag 'style', 'style' %>
+		<link rel="shortcut icon" href="ball.ico">
+	</head>
+
+	<body id="css-zen-garden">
+
+		<div class="page-wrapper">
+
+			<section class="intro" id="zen-intro">
+
+				<header role="banner">
+					<h1></h1>
+					<h2></h2>
+				</header>
+
+				<div class="summary" id="zen-summary" role="article">
+
+					<p>Universidad Nacional de Quilmes - Elementos de Ingeniería de Software - Primer Cuatrimestre 2014</p>
+
+				</div>
+
+			</section>
+
+			<div class="error" id="zen-preamble" role="article">
+				<h3>
+				<%= [:error, :warning, :notice].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => false) }.join.html_safe %>
+				</h3>
+			</div>
+
+			<div class="exito" id="zen-preamble" role="article">
+				<h3>
+				<%= [:success].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => false) }.join.html_safe %>
+				</h3>
+			</div>
+
+      			<%= yield %>
+
+		</div>
+      
+	</body>
+
+</html>

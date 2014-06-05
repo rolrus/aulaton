@@ -105,6 +105,41 @@ table,th,td
 	font-size: 90%;
 }
 
+.exito{
+	margin-left: 220px;
+	padding-right: 10px;
+	font-size: 90%;
+}
+
+.error{
+	margin-left: 220px;
+	padding-right: 10px;
+	font-size: 90%;
+}
+
+.exito h3{
+	color: #04B431;
+	font-size: 100%;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 3px;
+	position: relative;
+	padding: 0 0 0 1px;
+	background-repeat: no-repeat;
+	background-position: 0 0px;
+}
+.error h3{
+	color: #FE2E2E;
+	font-size: 100%;
+	text-align: center;	
+	margin-top: 0px;
+	margin-bottom: 3px;
+	position: relative;
+	padding: 0 0 0 1px;
+	background-repeat: no-repeat;
+	background-position: 0 0px;
+}
+
 /* Columna izquierda */
 
 .columnaIzquierda {

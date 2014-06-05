@@ -1,65 +1,37 @@
-<head>
-	<meta charset="utf-8">
-	<title>Macaya</title>
-	<%= stylesheet_link_tag 'style', 'style' %>
-	<link rel="shortcut icon" href="ball.ico">
-</head>
-
-<body id="css-zen-garden">
-<div class="page-wrapper">
-
-	<section class="intro" id="zen-intro">
-		<header role="banner">
-			<h1></h1>
-			<h2>Your Web-App Tournament Creator</h2>
-		</header>
-
-
-		<div class="summary" id="zen-summary" role="article">
-			<p>Universidad Nacional de Quilmes - Elementos de Ingeniería de Software - Primer Cuatrimestre 2014</p>
-		</div>
-
-	</section>
-
-	<div class="preamble" id="zen-preamble" role="article">
-			<table border="1" style="width:500px">
-			<h3>Listado de Torneos</h3>
-				<tr>
-				  <th>Torneos</th>
-				</tr>
-				<% @torneos.each do | torneo | %>
-				<tr>
-  				<td>
-					<%= torneo.name %>
+<div class="preamble" id="zen-preamble" role="article">
+		<table border="1" style="width:500px">
+		<h3>Listado de Torneos</h3>
+			<tr>
+			  <th>Torneos</th>
+			</tr>
+			<% @torneos.each do | torneo | %>
+			<tr>
+				<td>
+				<%= torneo.name %>
 				</td>
-				</tr>
- 				<% end %>
+			</tr>
+			<% end %>
 
-			</table>
-	</div>
-
-	<aside class="columnaIzquierda" role="complementary">
-		<div class="wrapper">
-			<div class="design-selection" id="design-selection">
-				<h3 class="select">ACCIONES</h3>
-				<nav role="navigation">
-					<ul>
-<!--
-						<li>
-							
-						</li>	
-						<li>
-							
-						</li>		
--->						
-					</ul>
-				</nav>
-				
-			</div>
-
-		</div>
-	</aside>
-
+		</table>
 </div>
-</body>
-</html>
+
+<aside class="columnaIzquierda" role="complementary">
+	<div class="wrapper">
+		<div class="design-selection" id="design-selection">
+			<h3 class="select">ACCIONES</h3>
+			<nav role="navigation">
+				<ul>
+
+					<li>
+						
+					</li>	
+					<li>
+						
+					</li>		
+						
+				</ul>
+			</nav>
+			
+		</div>
+	</div>
+</aside>
