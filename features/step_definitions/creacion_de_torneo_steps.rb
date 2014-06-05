@@ -15,6 +15,6 @@ Then(/^se crea exitosamente el torneo "(.*?)"$/) do |nombre_torneo|
 end
 
 Then(/^me indica error porque ya existe un torneo$/) do 
- # expect(page).to have_content 'Ya existe un mismo torneo'
+  expect(page).to have_content 'NO SE PUDO CREAR EL TORNEO'
 end
 

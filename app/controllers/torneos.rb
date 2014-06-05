@@ -13,10 +13,10 @@ Macaya::App.controllers :torneos do
 	post :create do
 		@torneo = Torneo.new(params[:torneo])
 		if @torneo.save
-		  flash[:success] = 'El torneo fue creado.'
+		  flash[:success] = 'EL TORNEO FUE CREADO'
 		  redirect '/'
 		else
-		  flash.now[:error] = 'No se pudo crear el torneo.'
+		  flash.now[:error] = 'NO SE PUDO CREAR EL TORNEO'
 		  render 'torneos/new'
         	end
 	end

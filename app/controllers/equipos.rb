@@ -13,10 +13,10 @@ Macaya::App.controllers :equipos do
 	post :create do
 		@equipo = Equipo.new(params[:equipo])
 		if @equipo.save
-		  flash[:success] = 'El equipo fue creado.'
+		  flash[:success] = 'EL EQUIPO FUE CREADO'
 		  redirect '/'
 		else
-		  flash.now[:error] = 'No se pudo crear el equipo.'
+		  flash.now[:error] = 'NO SE PUDO CREAR EL EQUIPO'
 		  render 'equipos/new'
         	end
 	end
