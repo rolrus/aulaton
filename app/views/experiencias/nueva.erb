@@ -1,5 +1,11 @@
-<form>
-<input type='text' value='Ingrese algo' />
+<form method="post" action='/experiencias/create'>
+  <%= csrf_token_field %>
+
+  <input type='text' value='Ingrese algo' />
+  Tema <input type="text" placeholder="¿Qué tema trabajaste?" class="large" value="<%= @experiencia.tema %>"/>
+  Objetivo <input type="text" placeholder="¿Qué te propusiste eseñar?" class="large" value="<%= @experiencia.objetivo %>"/>
+Contanos brevemente ¿Cómo lo hiciste? <input type="text" class="large" value="<%= @experiencia.dinamica %>"/>
+¿Cuanto tiempo te llevó? <input type="text" class="large" value="<%= @experiencia.duracion %>"/>
 <input type='submit' value='Guardar experiencia' />
 </form>
 
