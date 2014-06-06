@@ -8,10 +8,6 @@ module Macaya
     sprockets :minify => (Padrino.env == :production)
 
     enable :sessions
-    
-    get '/experiencias/nueva' do
-        render 'experiencias/nueva'
-    end
 
     ##
     # Caching support

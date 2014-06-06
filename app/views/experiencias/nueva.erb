@@ -1,4 +1,4 @@
-<% form_for(@experiencia, '/experiencias/create') do |t| %> 
+<% form_for(@experiencia, '/experiencias/nueva') do |t| %> 
   Tema 
   <%= t.text_field :tema, :placeholder => "¿Qué tema trabajaste?" %> <br>
   
@@ -9,7 +9,7 @@
   <%= t.text_field :dinamica %> <br>
 
   ¿Cuanto tiempo te llevó?
-  <%= t.text_field :duracion, %> <br>
+  <%= t.text_field :duracion %> <br>
 
   <%= t.submit "Crear", :class => 'button' %>
 <% end %>

@@ -1,8 +1,7 @@
 Macaya::App.controllers :home do
   
   get :index, :map => '/' do
-    @torneos = Torneo.all
-    @equipos = Equipo.all
+    @experiencias = Experiencia.all(:limit => 10, :order => [:id .desc])
     render 'home/index'
   end
   
