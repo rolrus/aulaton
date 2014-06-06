@@ -9,6 +9,9 @@ module Macaya
 
     enable :sessions
     
+    get '/experiencias/nueva' do
+        render 'experiencias/nueva'
+    end
 
     ##
     # Caching support

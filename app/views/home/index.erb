@@ -1,55 +1,17 @@
-<div class="preamble" id="zen-preamble" role="article">
-		<h3>Torneos Creados Recientemente</h3>
-		<p>Aquí se encuentran los torneos recientemente creados: </p>
-		<table border="1" style="width:500px">
-			<tr>
-			  <th>Torneos</th>
-			</tr>
-			<% @torneos.each do | torneo | %>
-			<tr>
-  			<td>
-				<%= torneo.name %>
-			</td>
-			</tr>
- 			<% end %>
 
-		</table>
-		<p><a href="<%= url(:torneos, :all) %>" class="ver-mas">Ver más</a></p>
-</div>
+<h3>Comparte tus experiencias en el aula: </h3>
 
-<div class="preamble" id="zen-preamble" role="article">
-		<h3>Equipos Creados Recientemente</h3>
-		<p>Aquí se encuentran los equipos recientemente creados: </p>
-		<table border="1" style="width:500px">
-			<tr>
-			  <th>Equipos</th> 
-			</tr>
-			<% @equipos.each do | equipo | %>
-			<tr>
-			<td>
-				<%= equipo.name %>
-			</td>
-			</tr>
-				<% end %>
-		</table>
-		<p><a href="<%= url(:equipos, :all) %>" class="ver-mas">Ver más</a></p>
-</div>
+<a href="/experiencias/nueva" class="btn btn-primary big">Cuentanos tu experiencia</a>
 
-<aside class="columnaIzquierda" role="complementary">
-	<div class="wrapper">
-		<div class="design-selection" id="design-selection">
-			<h3 class="select">ACCIONES</h3>
-			<nav role="navigation">
-				<ul>
-					<li>
-						<a href="<%= url(:torneos, :new) %>" class="ver-mas"><img src="agregarTorneoButton.jpg"</a>
-					</li>	
-					<li>
-						<a href="<%= url(:equipos, :new) %>" class="ver-mas"><img src="agregarEquipoButton.jpg"</a>
-					</li>						
-				</ul>
-			</nav>
-			
+
+<h3>Experiencias previas</h3>
+
+<div id='wrapper' >
+	<div id='columns'>
+		<% @torneos.each do | torneo | %>
+		<div class='pin'>
+			<%= torneo.name %>
 		</div>
-		</div>
-</aside>
+		<% end %>	
+	</div>
+</div>
