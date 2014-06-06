@@ -1,12 +1,18 @@
-<form method="post" action='/experiencias/create'>
-  <%= csrf_token_field %>
+<% form_for(@experiencia, '/experiencias/create') do |t| %> 
+  Tema 
+  <%= t.text_field :tema, :placeholder => "¿Qué tema trabajaste?" %> <br>
+  
+  Objetivo 
+  <%= t.text_field :objetivo, :placeholder => "¿Qué te propusiste eseñar?" %> <br>
+  
+  Contanos brevemente ¿Cómo lo hiciste? 
+  <%= t.text_field :dinamica %> <br>
 
-  <input type='text' value='Ingrese algo' />
-  Tema <input type="text" placeholder="¿Qué tema trabajaste?" class="large" value="<%= @experiencia.tema %>"/>
-  Objetivo <input type="text" placeholder="¿Qué te propusiste eseñar?" class="large" value="<%= @experiencia.objetivo %>"/>
-Contanos brevemente ¿Cómo lo hiciste? <input type="text" class="large" value="<%= @experiencia.dinamica %>"/>
-¿Cuanto tiempo te llevó? <input type="text" class="large" value="<%= @experiencia.duracion %>"/>
-<input type='submit' value='Guardar experiencia' />
-</form>
+  ¿Cuanto tiempo te llevó?
+  <%= t.text_field :duracion, %> <br>
+
+  <%= t.submit "Crear", :class => 'button' %>
+<% end %>
+
 
 <a href="/" class="btn btn-primary big">Volver</a>
