@@ -1,12 +1,27 @@
-<% form_for(@experiencia, '/experiencias/nueva') do |t| %> 
-  Tema 
+<% form_for(:experiencia, '/experiencias/create') do |t| %>
+  
+  Nivel
+  <%= select_tag(:favorite_color, 
+                 :options => ['Elegir un nivel...', 'Primaria', 'Secundaria' ], 
+                 :selected => 'green1')
+  %><br>
+
+ Area
+  <%= select_tag(:favorite_color, 
+                 :options => ['Elegir un Area...', 'Artes', 'Ciencias sociales', 'Ciencias naturales',
+                              'Comunicacion', 'Economia y administracion', 'Educacion fisica', 'Educacion sexual integral', 'Filosofia', 'Informatica', 'Lengua', 'Literatura','Matematica', 'Tecnologia', 'Turismo'  
+                  ], 
+                 :selected => 'green1')
+ %><br>
+  
+  Tema
   <%= t.text_field :tema, :placeholder => "¿Qué tema trabajaste?" %> <br>
   
-  Objetivo 
-  <%= t.text_field :objetivo, :placeholder => "¿Qué te propusiste eseñar?" %> <br>
+  Objetivo <br>
+  <%= t.text_area :objetivo, :placeholder => "¿Qué te propusiste eseñar?" %> <br>
   
-  Contanos brevemente ¿Cómo lo hiciste? 
-  <%= t.text_field :dinamica %> <br>
+  Contanos brevemente ¿Cómo lo hiciste? <br>
+  <%= t.text_area :dinamica %> <br>
 
   ¿Cuanto tiempo te llevó?
   <%= t.text_field :duracion %> <br>
