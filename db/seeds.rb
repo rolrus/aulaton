@@ -1,1 +1,1 @@
-torneo = Torneo.create(:name => 'testName')
+#torneo = Torneo.create(:name => 'testName')
