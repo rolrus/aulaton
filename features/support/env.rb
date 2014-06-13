@@ -26,4 +26,4 @@ torneo = Torneo.create(:name => 'testName')
 # You can handle all padrino applications using instead:
 #   Padrino.application
 #Capybara.default_driver = :selenium
-Capybara.app = Macaya::App.tap { |app|  }
+Capybara.app = Aulaton::App.tap { |app|  }

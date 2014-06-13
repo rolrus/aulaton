@@ -1,4 +1,4 @@
-Macaya::App.controllers :home do
+Aulaton::App.controllers :home do
   
   get :index, :map => '/' do
     @experiencias = Experiencia.all(:limit => 10, :order => [:id .desc])

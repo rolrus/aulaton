@@ -1,4 +1,4 @@
-Macaya::App.controllers :experiencias do
+Aulaton::App.controllers :experiencias do
 
 	get :nueva do
 		@experiencia = Experiencia.new

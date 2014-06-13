@@ -1,4 +1,4 @@
-module Macaya
+module Aulaton
   class App < Padrino::Application
     register Padrino::Rendering
     register Padrino::Mailer

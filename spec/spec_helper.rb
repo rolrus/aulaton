@@ -25,5 +25,5 @@ RSpec.configure do |conf|
 end
 
 def app
-  Macaya::App.tap { |app|  }
+  Aulaton::App.tap { |app|  }
 end
