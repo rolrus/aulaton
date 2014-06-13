@@ -11,9 +11,9 @@ Macaya::App.controllers :experiencias do
 			flash[:success] = 'Gracias por contarnos tu experiencia'
 			redirect '/'
 		else
-			flash.now[:error] = 'Faltan datos para completar tu experiencia'
+			flash.now[:error] = 'Hubo un problema para guardar tu experiencia'
 			render 'experiencias/nueva'
    	end
 	end
-	
+
 end

@@ -4,9 +4,9 @@ describe Equipo do
 
 	describe 'Model' do
 
-		subject {@equipo = Equipo.new}
+		# subject {@equipo = Equipo.new}
 
-		it {should respond_to( :name)}
+		# it {should respond_to( :name)}
 
 	end
 	

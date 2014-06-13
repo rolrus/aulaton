@@ -20,7 +20,7 @@ RSpec.configure do |conf|
   conf.include Rack::Test::Methods
   DataMapper::Logger.new($stdout, :all)
   DataMapper.auto_migrate!
-  torneo = Torneo.create(:name => 'testName')
+  # torneo = Torneo.create(:name => 'testName')
                          
 end
 
