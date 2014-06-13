@@ -1,3 +1,5 @@
+<h3>Contános tu experiencia</h3>
+
 <% form_for(:experiencia, '/experiencias/create') do |t| %>
   
   Nivel
@@ -20,7 +22,7 @@
   Objetivo <br>
   <%= t.text_area :objetivo, :placeholder => "¿Qué te propusiste eseñar?", :required => true %> <br>
   
-  Contanos brevemente ¿Cómo lo hiciste? <br>
+  Contános brevemente ¿Cómo lo hiciste? <br>
   <%= t.text_area :dinamica, :required => true %> <br>
 
   ¿Cuanto tiempo te llevó?

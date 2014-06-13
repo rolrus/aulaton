@@ -1,10 +1,5 @@
 Macaya::App.controllers :experiencias do
 
-	# get :all do
-	#     @equipos = Equipo.all
-	#     render 'equipos/equipo_manager'
-	# end
-
 	get :nueva do
 		@experiencia = Experiencia.new
 	    render 'experiencias/nueva'
@@ -20,4 +15,5 @@ Macaya::App.controllers :experiencias do
 			render 'experiencias/nueva'
    	end
 	end
+	
 end
