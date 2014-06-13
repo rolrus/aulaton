@@ -12,12 +12,12 @@ Macaya::App.controllers :experiencias do
 
 	post :create do
 		@experiencia = Experiencia.new(params[:experiencia])
-		@experiencia.save
-		  #flash[:success] = 'EL EQUIPO FUE CREADO'
-		  redirect '/'
-		# else
-		#   flash.now[:error] = 'NO SE PUDO CREAR EL EQUIPO'
-		#   render 'equipos/new'
-  #       	end
+		if @experiencia.save
+			flash[:success] = 'Gracias por contarnos tu experiencia'
+			redirect '/'
+		else
+			flash.now[:error] = 'Faltan datos para completar tu experiencia'
+			render 'experiencias/nueva'
+   	end
 	end
 end
