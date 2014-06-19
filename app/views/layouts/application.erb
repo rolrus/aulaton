@@ -5,13 +5,11 @@
 		<title>Aulaton</title>
 		<%= stylesheet_link_tag 'pin' %>
 		<%= stylesheet_link_tag 'bootstrap' %>
-		<link rel="shortcut icon" href="ball.ico">
+		<link rel="shortcut icon" href="sharethis-16.ico">
 	</head>
 
 	<body id="css-zen-garden">
-
 		<div class="page-wrapper">
-
 			<div class="error" id="zen-preamble" role="article">
 				<h3>
 				<%= [:error, :warning, :notice].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => false) }.join.html_safe %>
@@ -25,7 +23,9 @@
 			</div>
 
       <h1>Aulaton</h1>
-
+      <p>Te invitamos a compartir, conocer y valorar experiencias de otros y otras docentes del país en
+			el uso de las notebooks de Conectar Igualdad en el aula. La podés buscar por nivel primario o segundario y por cada área temática.</p>
+			
       <%= yield %>
 
 		</div>
