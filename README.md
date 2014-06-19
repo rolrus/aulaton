@@ -9,4 +9,4 @@ _Para correr la aplicación_
 
 * Ejecuta **_bundle install --without staging production_**, para instalar las dependencias del proyecto.
 * Ejecuta **_PADRINO_ENV=development bundle exec padrino rake db:migrate_**, para inicializar las tablas de la base de datos.
-* Ejectua **_bundle exec padrino start_**, para deployar la aplicación.
+* Ejecuta **_bundle exec padrino start_**, para deployar la aplicación.
